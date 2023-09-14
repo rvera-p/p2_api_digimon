@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script src="assets/js/index.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Inicio NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="assets/img/Digimon.svg"
+            alt=""
+            width="auto"
+            height="50"
+            class="d-inline-block align-text-top"
+          />
+          Digimon
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin NAVBAR -->
+    <!-- Inicio HEADER -->
+    <header class="container-fluid p-0">
+      <img src="assets/img/banner.jpg" alt="banner" class="img-responsive">
+    </header>
+    <!-- Fin HEADER -->
+    <main class="container">
+      <h1 class="text-center p-2 m-auto">Lista de Digimon</h1>
+      <!-- Buscador -->
+      <section class="container col-8 col-lg-6 col-md-8 col-sm-10">
+        <form id="formBuscarDigimon">
+          <label for="buscarDigimon" class="form-label">Nombre:</label>
+          <div class="d-flex justify-content-center">
+            <input
+              type="text"
+              name="buscarDigimon"
+              id="nombreDigimon"
+              class="form-control"
+              required
+            />
+            <input type="submit" value="Buscar" class="btn btn-success" />
+          </div>
+        </form>
+      </section>
+      <!-- Tabla -->
+      <section id="containerElementos" class="row m-4">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <table id="tablaDigimon" class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Nivel</th>
+                <th scope="col">Imagen</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTabla"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- MODAL -->
+      <div
+        class="modal"
+        id="modalDigimon"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Informacion del Digimon</h5>
+              <button
+                type="button"
+                class="close btn btn-secondary"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="" id="imagenDigimon" alt="" />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>Nombre: </b>
+                  <p id="nombreDigimon"></p>
+                </li>
+                <li class="list-group-item">
+                  <b>Nivel: </b>
+                  <p id="nivelDigimon"></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
