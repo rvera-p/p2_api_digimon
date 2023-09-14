@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DigimonWiki</title>
+    <!-- Logo -->
+    <link rel="icon" href="assets/img/logo.png" />
 
     <!-- BOOTSTRAP -->
     <link
@@ -23,6 +25,11 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/9dce4b738e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- JS -->
     <script src="assets/js/index.js"></script>
@@ -31,25 +38,27 @@
   </head>
   <body>
     <!-- Inicio NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="assets/img/Digimon.svg"
-            alt=""
-            width="auto"
-            height="50"
-            class="d-inline-block align-text-top"
-          />
-          Digimon
-        </a>
+        <img src="assets/img/nav-logo.png" id="imgNav" alt="logo" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#formBuscarDigimon">Buscador</a>
             </li>
           </ul>
         </div>
@@ -57,15 +66,16 @@
     </nav>
     <!-- Fin NAVBAR -->
     <!-- Inicio HEADER -->
-    <header class="container-fluid p-0">
-      <img src="assets/img/banner.jpg" alt="banner" class="img-responsive">
+    <header>
+      <img src="assets/img/banner.jpg" class="imagenHeader" alt="" />
     </header>
     <!-- Fin HEADER -->
-    <main class="container">
+
+    <main class="container mt-5">
       <h1 class="text-center p-2 m-auto">Lista de Digimon</h1>
       <!-- Buscador -->
       <section class="container col-8 col-lg-6 col-md-8 col-sm-10">
-        <form id="formBuscarDigimon">
+        <form id="formBuscarDigimon" class="mb-5">
           <label for="buscarDigimon" class="form-label">Nombre:</label>
           <div class="d-flex justify-content-center">
             <input
@@ -80,8 +90,11 @@
         </form>
       </section>
       <!-- Tabla -->
-      <section id="containerElementos" class="row m-4">
-        <div class="col-lg-12 col-md-12 col-sm-12">
+      <section
+        id="containerElementos"
+        class="row d-flex justify-content-center m-4"
+      >
+        <div class="col-lg-8 col-md-10 col-sm-8">
           <table id="tablaDigimon" class="table">
             <thead>
               <tr>
@@ -133,5 +146,54 @@
         </div>
       </div>
     </main>
+
+    <!-- Inicio FOOTER -->
+    <footer class="text-center text-white">
+      <div class="container pt-4">
+        <section class="mb-4">
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+      </div>
+      <div id="copyrightDiv" class="text-center text-dark p-3">
+        © 2023 Copyright: <b>Rafael Vera</b>
+      </div>
+    </footer>
   </body>
 </html>
