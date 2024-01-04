@@ -20,7 +20,8 @@ header {
 }
 
 body {
-background-color: #f1f1f1;}
+  background-color: #f1f1f1;
+}
 
 /* NAVBAR */
 nav {
@@ -33,6 +34,10 @@ nav {
 }
 
 /* TABLA */
+#containerElementos {
+  overflow-x: scroll;
+  max-width: 100%;
+}
 #cuerpoTabla img {
   width: 20px;
   height: auto;
